@@ -3,5 +3,5 @@ Lexical Analysis ==
 
     Tokens: Data structures that are fed to the Parser
 
-    Parser takes src code and converts it into an abstract syntax tree
+    SrcCode -> Lexer(Tokens) -> Parser(AST)
 
