@@ -36,7 +36,9 @@ func (l *Lexer) NextToken() token.Token {
 			l.readChar()
 
 			tok.Type = token.NOT_EQ
-			tok.Literal = string(l.ch) + string(ch)
+			tok.Literal = string(ch) + string(l.ch)
+
+			break
 		}
 		tok = newToken(token.BANG, l.ch)
 	case '=':
@@ -47,6 +49,8 @@ func (l *Lexer) NextToken() token.Token {
 
 			tok.Type = token.EQ
 			tok.Literal = string(ch) + string(l.ch)
+
+			break
 		}
 		tok = newToken(token.ASSIGN, l.ch)
 	case ';':
